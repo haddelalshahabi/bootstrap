@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Motorvognregister</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form">
+                <!--forteller at label og input henger sammen-->
+                <div class="form-gruop">
+                    <label for="personnr">Personnummer</label>
+                    <input type="text" class="form-control" id="personnr"/>
+                </div>
+
+                <div class="form-gruop">
+                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" id="navn"/>
+                </div>
+
+                <div class="form-gruop">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse"/>
+                </div>
+
+                <div class="form-gruop">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn"/>
+                </div>
+
+                <div class="form-gruop">
+                    <label for="merke">Merke</label>
+                    <input type="text" class="form-control" id="merke"/>
+                </div>
+
+                <div class="form-gruop">
+                    <label for="type">Type</label>
+                    <input type="text" class="form-control" id="type"/>
+                </div>
+             </form>
+
+            <button class="btn btn-primary" onclick="regMotorvogn()">Registrer</button>
+        </div>
+        <div class="cl-md-8">
+            Alle bilene:
+            <div id="bilene" class="table-responsive"></div>
+            <button class="btn btn-danger" onclick="slettAlle()">Slett alle</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
